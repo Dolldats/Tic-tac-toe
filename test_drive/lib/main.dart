@@ -61,7 +61,7 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
 
     for (var combo in winningCombos) {
       if (board[combo[0]] != null &&
-          board[combo[0]] == board[combo[1]] &&
+          board[combo[0]] == board[combo[2]] &&
           board[combo[1]] == board[combo[2]]) {
         return board[combo[0]];
       }
@@ -97,14 +97,13 @@ class _TicTacToeGameState extends State<TicTacToeGame> {
                   margin: const EdgeInsets.all(8.0),
                   decoration: BoxDecoration(
                     border: Border.all(width: 2, color: Colors.black),
-                    color: Colors.blueAccent,
+                    color: const Color.fromARGB(255, 176, 209, 186),
                   ),
                   child: Center(
                     child: Text(
                       board[index] ?? '',
                       style: const TextStyle(
-                          fontSize: 40,
-                          color: Color.fromARGB(255, 27, 158, 60)),
+                          fontSize: 40, color: Color.fromARGB(255, 10, 10, 10)),
                     ),
                   ),
                 ),
